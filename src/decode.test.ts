@@ -1,9 +1,10 @@
-import { AdvertisingReportEvent, decodeEvents } from './decode'
+import { AdvertisingReportEvent } from './common'
+import { decodeEvents } from './decode'
 
 describe('decode', () => {
   describe('decodeEvent', () => {
     it('should decode response for READ_LOCAL_INFORMATION', () => {
-      const events = decodeEvents(Buffer.from('AA000E800100AAAAAAAAFFFFFFFFFFFF01FF', 'hex'))
+      const events = decodeEvents(Buffer.from('AA000E800100AAAAAAAAFFFFFFFFFFFF01CE', 'hex'))
       expect(events).toMatchSnapshot()
     })
 
