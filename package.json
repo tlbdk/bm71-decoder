@@ -1,0 +1,54 @@
+{
+  "name": "bm71-decoder",
+  "version": "1.0.0",
+  "description": "BM71 Bluetooth Low Energy command decoder",
+  "main": "index.js",
+  "scripts": {
+    "test": "TZ=UTC jest",
+    "cov": "TZ=UTC jest --coverage=true",
+    "build": "build src",
+    "build:js": "build --skip-typings src",
+    "build:types": "tsc --noEmit",
+    "lint": "eslint './src/**/*.{ts,tsx}' './bin/**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix './src/**/*.{ts,tsx}' './bin/**/*.{ts,tsx}'",
+    "prepack": "npm run build",
+    "prepublishOnly": "rm -rf build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlbdk/bm71-decoder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tlbdk/bm71-decoder/issues"
+  },
+  "homepage": "https://github.com/tlbdk/bm71-decoder#readme",
+  "devDependencies": {
+    "@babel/cli": "7.14.3",
+    "@babel/core": "7.14.3",
+    "@babel/plugin-proposal-class-properties": "7.13.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.14.2",
+    "@babel/plugin-proposal-numeric-separator": "7.14.2",
+    "@babel/plugin-proposal-optional-chaining": "7.14.2",
+    "@babel/preset-env": "7.14.2",
+    "@babel/preset-typescript": "7.13.0",
+    "@connectedcars/setup": "^0.14.0",
+    "@types/jest": "26.0.23",
+    "@typescript-eslint/eslint-plugin": "4.24.0",
+    "@typescript-eslint/parser": "4.24.0",
+    "babel-jest": "26.6.3",
+    "eslint": "7.26.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "jest": "26.6.3",
+    "jest-circus": "^26.6.3",
+    "prettier": "2.3.0",
+    "typescript": "4.2.4"
+  },
+  "engines": {
+    "node": ">=10.15.0"
+  }
+}
