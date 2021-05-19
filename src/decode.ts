@@ -21,6 +21,7 @@ export function decodeEvents(data: Buffer): Event[] {
     }
 
     const dataLength = data.readUInt16BE(1)
+    // TODO: Handle this better, just because we don't have enough data
     if (dataLength === 0 || dataLength + 3 > data.length) {
       // Length should always be 1 or larger as opcode is also counted
       data = sliceToNextStart(data, 1)
